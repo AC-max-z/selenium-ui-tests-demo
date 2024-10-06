@@ -148,7 +148,7 @@ Test layer has:
 
 ### Class diagram
 
-![class-diagram.png](src%2Ftest%2Fresources%2Fclass-diagram.png)
+![class-diagram.png](ui-tests/src/test/resources/class-diagram.png)
 
 ## Driver layer
 
