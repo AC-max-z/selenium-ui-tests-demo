@@ -1,0 +1,13 @@
+[versions]
+fakerVer = "0.13"
+modelMapperVer = "2.3.8"
+junitVer = "5.8.1"
+testContainersVer = "1.19.3"
+
+[libraries]
+faker = { module = "com.github.javafaker:javafaker", version.ref = "fakerVer" }
+modelMapper = { module = "org.modelmapper:modelmapper", version.ref = "modelMapperVer" }
+junit = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junitVer" }
+logbackJson = { module = "ch.qos.logback.contrib:logback-json-classic", version = "0.1.5" }
+logbackJackson = { module = "ch.qos.logback.contrib:logback-jackson", version = "0.1.5" }
+jacksonDatabind = { module = "com.fasterxml.jackson.core:jackson-databind", version = "2.15.0" }
