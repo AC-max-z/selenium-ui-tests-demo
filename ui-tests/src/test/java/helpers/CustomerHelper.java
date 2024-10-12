@@ -16,7 +16,7 @@ import static org.assertj.core.api.SoftAssertions.assertSoftly;
 import static utils.TestStep.step;
 
 public class CustomerHelper {
-    private static void createCustomer(CreateCustomerForm createCustomerForm, Customer customer) {
+    private static void fillAndSubmitCreateCustomerForm(CreateCustomerForm createCustomerForm, Customer customer) {
         createCustomerForm.enterName(customer.getName());
         createCustomerForm.enterEmail(customer.getEmail());
         createCustomerForm.enterAge(String.valueOf(customer.getAge()));
@@ -24,7 +24,7 @@ public class CustomerHelper {
         createCustomerForm.submit();
     }
 
-    private static void editCustomer(UpdateCustomerForm updateCustomerForm, Customer customer) {
+    private static void fillAndSubmitEditCustomerForm(UpdateCustomerForm updateCustomerForm, Customer customer) {
         if (Objects.nonNull(customer.getName())
                 && !updateCustomerForm
                 .getNameInput()
@@ -64,7 +64,7 @@ public class CustomerHelper {
         step("Click create customer button", logger, indexPage::createCustomer);
         step("Fill in create customer form", logger, () -> {
             var createCustomerForm = new CreateCustomerForm(driver);
-            createCustomer(createCustomerForm, customer);
+            fillAndSubmitCreateCustomerForm(createCustomerForm, customer);
         });
     }
 
@@ -112,7 +112,7 @@ public class CustomerHelper {
         step("Click edit customer button", logger, () -> indexPage.editCustomer(customerCard));
         step("Edit customer with new data", logger, () -> {
             var updateCustomerForm = new UpdateCustomerForm(driver);
-            editCustomer(updateCustomerForm, updatedCustomer);
+            fillAndSubmitEditCustomerForm(updateCustomerForm, updatedCustomer);
         });
     }
 
