@@ -1,4 +1,3 @@
-sup
 - [What the actual fuck](#what-the-fuck-is-even-that-interrobang)
 - [Environment configuration](#env-config-example)
 - [Driver configuration](#driver-config-example)
@@ -10,15 +9,11 @@ sup
 - [Class diagram](#class-diagram)
 - [Driver layer overview](#driver-layer)
 - [Test layer overview](#test-layer)
-- [P.S.](#ps)
 - [TL;DR](#tldr)
 - [What's next](#whats-next)
 # WHAT THE FUCK IS EVEN THAT? :interrobang:
 
-You may say. And the answer is... 
-# :neckbeard:
-
-Configurable UI tests with raw ==Selenium== and ==Junit==. With "auto-waits" and stuff. 
+Configurable UI tests with raw Selenium and Junit. With "auto-waits" and stuff. 
 # :cool:
 
 | Configuration           | Default file location                                      | Custom file path program arg |
@@ -98,8 +93,6 @@ configuration as well.
 - `./gradlew acceptance-scope-ui-tests` - runs tests with tags "E2E", "UI" and "acceptance"
 - `./gradlew smoke-scope-ui-tests` - runs tests with tags "E2E", "UI" and "smoke"
 ## HOW DOES IT WORK
-
-#TODO: use different tool(s) to make better diagrams
 
 ### Project structure
 ```
@@ -213,14 +206,6 @@ And finally `extensions` for your JUnit test extension classes if you need those
 
 That's about it. Thanks. Bye. Have a nice life/everything else.
 
-## P.S.
-Never actually use this shit. Better stick with your Playwright or whatever. 
-Or, better yet, find a better job/career/the thing you do with your limited time in this universe in this timespan you are entrapped in.
-Anyway, you do you, you surely know better... And don't let the bastards get to you. Or do. If you feel like. 
-
-:frog::frog::frog::frog:
-:rocket::rocket::rocket::rocket:
-
 ## TLDR:
 Data-driven :rocket:, cross-browser :rocket:, concurrent/parallel :rocket:, "scalable" :frog: UI tests project skeleton sample with:
 * [x] raw [Selenium](https://www.selenium.dev/),
@@ -266,5 +251,3 @@ Don't. Made this for job interview purposes with a certain level of absurdity in
 - **Narrative Integration:** a storyline around tests where every test case has a backstory. As tests pass or fail, they advance the narrative, turning testing framework into an epic saga of UI interactions.
 
 - **Tests for tests:** tests that will test your tests.
-
-![xzibit.png](ui-tests/src/test/resources/xzibit.png)
