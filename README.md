@@ -3,6 +3,7 @@ sup
 - [Environment configuration](#env-config-example)
 - [Driver configuration](#driver-config-example)
 - [Feed data to parameterized tests through YAML](#customer-test-data-example)
+- [How to run tests](#how-to-run-tests)
 - [How does it work](#how-does-it-work)
 - [Project structure](#project-structure)
 - [High level diagram overview of project code](#high-level-overview)
@@ -88,7 +89,14 @@ data:
 
 Number of fork threads for tests is currently specified in `build.gradle.kts` but probably should be moved to
 configuration as well.
-
+## HOW TO RUN TESTS
+- `./gradlew test` - runs all tests;
+- `./gradlew test -DincludeTags="${tagExp}"` - runs tests only including specified JUnit tag expression;
+- `./gradlew test -DexcludeTags="${tagExp}"` - runs tests excluding specified JUnit tag expression (doesn't work with include tags simultaneously iirc);
+- `./gradlew e2e-ui-tests` - runs tests with tags "E2E" and "UI"
+- `./gradlew regression-scope-ui-tests` - runs tests with tags "E2E", "UI" and "regression"
+- `./gradlew acceptance-scope-ui-tests` - runs tests with tags "E2E", "UI" and "acceptance"
+- `./gradlew smoke-scope-ui-tests` - runs tests with tags "E2E", "UI" and "smoke"
 ## HOW DOES IT WORK
 
 #TODO: use different tool(s) to make better diagrams
