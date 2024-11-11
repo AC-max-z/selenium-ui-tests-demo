@@ -5,7 +5,6 @@
 - [How does it work](#how-does-it-work)
 - [Project structure](#project-structure)
 - [High level diagram overview of project code](#high-level-overview)
-- [Class diagram](#class-diagram)
 - [Driver layer overview](#driver-layer)
 - [Test layer overview](#test-layer)
 - [TL;DR](#tldr)
