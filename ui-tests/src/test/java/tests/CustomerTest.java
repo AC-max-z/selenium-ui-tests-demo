@@ -126,6 +126,7 @@ public class CustomerTest extends BaseTest {
                         LOGGER_THREAD_LOCAL.get()
                 );
             } catch (Exception e) {
+                super.tearDown();
                 throw new RuntimeException(e);
             } finally {
                 INDEX_PAGE_THREAD_LOCAL.remove();
