@@ -27,8 +27,9 @@ public enum WaitCondition {
 
         @Override
         public void apply(Wait<WebDriver> wait, List<WebElement> elements) {
-            throw new UnsupportedOperationException(
-                    "CLICKABLE is not supported for list of elements");
+            for (var element : elements) {
+                wait.until(ExpectedConditions.elementToBeClickable(element));
+            }
         }
     },
     INVISIBLE {
